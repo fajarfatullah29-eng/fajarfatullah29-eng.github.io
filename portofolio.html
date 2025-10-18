@@ -2,200 +2,295 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portofolio Kreatif - Fajar Fatullah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio PKL - Fajar Fatullah</title>
   <style>
-    /* Reset & dasar */
+    /* ==== RESET ==== */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
     }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9faff;
-      color: #222;
+      background: #f5f7fa;
+      color: #333;
       line-height: 1.6;
     }
+
     header {
-      background-color: #2c3e50;
-      color: #ecf0f1;
+      background: linear-gradient(135deg, #5d5fef, #7a77ff);
+      color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
+
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.2rem;
       margin-bottom: 0.3rem;
     }
+
     header p {
-      font-size: 1.2rem;
-      font-style: italic;
+      font-size: 1rem;
+      opacity: 0.9;
     }
+
     nav {
-      background-color: #34495e;
-      display: flex;
-      justify-content: center;
-      padding: 1rem 0;
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     nav a {
-      color: #ecf0f1;
-      margin: 0 1.5rem;
+      color: white;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
+      margin: 0 15px;
+      font-weight: 500;
     }
+
     nav a:hover {
-      color: #1abc9c;
+      color: #7a77ff;
     }
+
     section {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1rem;
+      padding: 3rem 10%;
     }
-    section h2 {
-      border-left: 6px solid #1abc9c;
-      padding-left: 0.8rem;
+
+    h2 {
+      color: #5d5fef;
       margin-bottom: 1rem;
-      color: #16a085;
-      font-size: 1.8rem;
+      border-bottom: 2px solid #7a77ff;
+      display: inline-block;
     }
-    ul {
-      list-style-type: disc;
-      margin-left: 1.5rem;
+
+    .profile,
+    .education,
+    .organization,
+    .portfolio,
+    .contact {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
       margin-bottom: 2rem;
     }
-    /* Portofolio grid */
-    .portfolio-grid {
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #7a77ff;
+    }
+
+    .profile h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .education ul,
+    .organization ul {
+      list-style: none;
+    }
+
+    .education li,
+    .organization li {
+      margin-bottom: 0.8rem;
+    }
+
+    .portfolio-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.8rem;
+      gap: 1.5rem;
     }
+
     .card {
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: transform 0.3s ease;
     }
+
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
     }
+
     .card img {
       width: 100%;
-      height: 160px;
+      height: 180px;
       object-fit: cover;
     }
+
     .card-content {
-      padding: 1rem 1.2rem 1.4rem 1.2rem;
+      padding: 1rem;
     }
+
     .card-content h3 {
       margin-bottom: 0.5rem;
-      color: #2980b9;
+      color: #5d5fef;
     }
-    .card-content p {
-      font-size: 0.95rem;
-      color: #555;
+
+    .contact-info {
+      text-align: center;
     }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    .contact-info a {
+      color: #5d5fef;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
     footer {
       text-align: center;
-      padding: 2rem 1rem;
-      background-color: #2c3e50;
-      color: #bdc3c7;
-      margin-top: 4rem;
-      font-size: 0.9rem;
+      padding: 2rem;
+      background: #333;
+      color: white;
     }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-direction: column;
-      }
-      nav a {
-        margin: 0.5rem 0;
+
+    @media (max-width: 768px) {
+      section {
+        padding: 2rem 5%;
       }
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Fajar Fatullah</h1>
-  <p>Mahasiswa SMK Informatika Utama | Web Developer</p>
-</header>
+  <header>
+    <h1>Portofolio PKL - Fajar Fatullah</h1>
+    <p>Rekayasa Perangkat Lunak | SMK Informatika Utama</p>
+  </header>
 
-<nav>
-  <a href="#profil">Profil</a>
-  <a href="#pendidikan">Pendidikan</a>
-  <a href="#organisasi">Organisasi</a>
-  <a href="#portofolio">Portofolio</a>
-</nav>
+  <nav>
+    <a href="#profil">Profil</a>
+    <a href="#pendidikan">Pendidikan</a>
+    <a href="#pengalaman">Organisasi</a>
+    <a href="#portofolio">Portofolio</a>
+    <a href="#sertifikat">Sertifikat</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
 
-<section id="profil">
-  <h2>Fajar Fatullah</h2>
-  <p>Saya adalah mahasiswa aktif di jurusan Informatika dengan semangat tinggi dalam pengembangan web dan aplikasi. Memiliki kemampuan dasar HTML, CSS, JavaScript, serta terus belajar framework terbaru. Aktif dalam organisasi kampus dan senang berkolaborasi dalam proyek.</p>
-</section>
+  <section id="profil" class="profile">
+    <center>
+      <img src="Fajar Fatullah.png" alt="Foto Profil" />
+      <h3>Fajar Fatullah</h3>
+      <p>
+        Saya adalah siswi SMK Informatika jurusan Rekayasa Perangkat Lunak (RPL).
+        Saya memiliki ketertarikan dalam pengembangan web dan ingin mengembangkan
+        kemampuan saya melalui kegiatan Praktik Kerja Lapangan (PKL).
+      </p>
+    </center>
+  </section>
 
-<section id="pendidikan">
-  <h2>Pendidikan</h2>
-  <ul>
-    <li><strong>SDN Limo 02</strong> (2016-2021)</li>
-    <li><strong>SMPN 17 Depok</strong>(2021-2024)</li>
-    <li><strong>SMK INFORMATIKA UTAMA</strong>(2024-Sekarang)</li>
-    
-  </ul>
-</section>
+  <section id="pendidikan" class="education">
+    <h2>Pendidikan</h2>
+    <ul>
+      <li><strong>SMK Informatika</strong> (2022 - Sekarang)<br />Jurusan Rekayasa Perangkat Lunak</li>
+      <li><strong>SMPN 17 Depok</strong> (2021 - 2024)</li>
+      <li><strong>SDN Limo 02</strong> (2016 - 2021)</li>
+    </ul>
+  </section>
 
-<section id="organisasi">
-  <h2>Pengalaman Organisasi</h2>
-  <ul>
-    <li><strong>Divisi IT</strong> — Divisi IT & Media (2024 - sekarang)</li>
-    <li><strong>Panitia Buka Bersama</strong> (2024)</li>
-  </ul>
-</section>
+  <section id="organisasi" class="organization">
+    <h2>organisasi</h2>
+    <ul>
+      <li><strong>Divisi IT</strong>  — Divisi IT & Media (2024 - sekarang)</li>
+      <li><strong>Panitia Buka Bersama</strong> (2024)</li>
+    </ul>
+  </section>
 
-<section id="portofolio">
-  <h2>Portofolio Pembuatan Website</h2>
-  <div class="portfolio-grid" id="portfolio-container">
-    <!-- Data portofolio muncul di sini -->
-  </div>
-</section>
+  <section id="portofolio" class="portfolio">
+    <h2>Portofolio Proyek</h2>
+    <div class="portfolio-cards" id="portfolio-list"></div>
+  </section>
 
-<footer>
-  &copy; 2025 Fajar Fatullah. Semua Hak Dilindungi.
-</footer>
+  <!-- === SERTIFIKAT === -->
+  <section id="sertifikat" class="portfolio">
+    <h2>Sertifikat</h2>
+    <div class=html.jpg">
 
-<script>
-  const portfolioItems = [
-    {
-      title: "Sistem Informasi Perpustakaan",
-      description: "Website untuk pengelolaan data buku dan peminjaman perpustakaan dengan fitur pencarian dan laporan.",
-      image: "https://via.placeholder.com/400x160.png?text=Perpustakaan"
-    },
-    {
-      title: "Website Profil UKM Fotografi",
-      description: "Website profil Unit Kegiatan Mahasiswa Fotografi dengan galeri foto, berita, dan formulir pendaftaran anggota baru.",
-      image: "https://via.placeholder.com/400x160.png?text=UKM+Fotografi"
-    }
-  ];
-
-  const container = document.getElementById('portfolio-container');
-
-  portfolioItems.forEach(item => {
-    const card = document.createElement('div');
-    card.className = 'card';
-    card.innerHTML = `
-      <img src="${item.image}" alt="Screenshot ${item.title}" />
-      <div class="card-content">
-        <h3>${item.title}</h3>
-        <p>${item.description}</p>
+      <div class="card">
+        <img src="html.jpg" alt="Sertifikat HTML - SoloLearn" />
+        <div class="card-content">
+          <h3>HTML</h3>
+          <p>Sertifikat dari SoloLearn setelah menyelesaikan kursus HTML dasar.</p>
+          <p><strong>Platform:</strong> SoloLearn</p>
+        </div>
       </div>
-    `;
-    container.appendChild(card);
-  });
-</script>
+
+      <div class="card">
+        <img src="css.jpg" alt="Sertifikat CSS - SoloLearn" />
+        <div class="card-content">
+          <h3>CSS</h3>
+          <p>Sertifikat dari SoloLearn untuk penguasaan dasar-dasar CSS.</p>
+          <p><strong>Platform:</strong> SoloLearn</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- === KONTAK === -->
+  <section id="kontak" class="contact">
+    <h2>Kontak</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="fajar.fatullah29@smk.belajar.id">fajar.fatullah29@smk.belajar.id</a></p>
+      <p><strong>Telepon:</strong> <a href="tel:+621514131256">+621514131256</a></p>
+      <p><strong>Alamat:</strong> Jl.h.mesir Rt 01/07</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fajar Fatullah. All rights reserved.</p>
+  </footer>
+
+  <!-- === SCRIPT PORTOFOLIO === -->
+  <script>
+    const portfolioData = [
+      {
+        title: "Jadwal Pembelajaran",
+        img: "project.png",
+        desc: "Tampilan tabel jadwal pembelajaran yang dibuat menggunakan HTML dan CSS. Digunakan untuk merencanakan materi dari Juli hingga September 2024/2025.",
+        tech: "HTML & CSS"
+      },
+      {
+        title: "Toko Belanja Online",
+        img: "project online shop.png",
+        desc: "Website sederhana toko online menggunakan HTML dan CSS. Memiliki header, navigasi, konten utama, dan footer.",
+        tech: "HTML & CSS"
+      }
+    ];
+
+    const portfolioList = document.getElementById("portfolio-list");
+
+    portfolioData.forEach(item => {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.innerHTML = `
+        <img src="${item.img}" alt="${item.title}" />
+        <div class="card-content">
+          <h3>${item.title}</h3>
+          <p>${item.desc}</p>
+          <p><strong>Teknologi:</strong> ${item.tech}</p>
+        </div>
+      `;
+      portfolioList.appendChild(card);
+    });
+  </script>
 
 </body>
 </html>
